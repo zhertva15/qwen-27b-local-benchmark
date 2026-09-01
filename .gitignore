@@ -11,8 +11,8 @@
 mini-swe-benchmark/state/active-server.json
 mini-swe-benchmark/state/benchmark-state.json
 mini-swe-benchmark/logs/server/
+codex-session-backup/
 
 # Temporary files
 *.tmp
 *.pid
-
