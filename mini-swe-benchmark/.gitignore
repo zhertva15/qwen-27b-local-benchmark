@@ -1,0 +1,7 @@
+.venv/
+cache/
+state/*.pid
+state/*.tmp
+results/**/logs/run_evaluation/
+*.zip
+

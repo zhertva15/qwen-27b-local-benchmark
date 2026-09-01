@@ -1,0 +1,69 @@
+{
+  "serverPath": "C:\\AI\\Qwen3.8-27B-Uncensored\\llama.cpp-b10734\\llama-server.exe",
+  "apiKey": "local-optimization-key",
+  "contextSize": 16384,
+  "models": [
+    {
+      "id": "fp8-q2",
+      "displayName": "FP8-derived Q2_K",
+      "path": "C:\\AI\\Qwen3.8-27B-Uncensored\\models\\Qwen3.8-27B-Uncensored-FP8.i1-Q2_K.gguf",
+      "baselineFitTarget": 512,
+      "forceFullGpu": true,
+      "supportsMtp": true
+    },
+    {
+      "id": "fp8-q4",
+      "displayName": "FP8-derived Q4_K_M",
+      "path": "C:\\AI\\Qwen3.8-27B-Uncensored\\models\\Qwen3.8-27B-Uncensored-FP8.i1-Q4_K_M.gguf",
+      "baselineFitTarget": 1024,
+      "forceFullGpu": false,
+      "supportsMtp": true
+    },
+    {
+      "id": "unleashed-q2",
+      "displayName": "Unleashed UD-Q2_K_XL",
+      "path": "C:\\AI\\Qwen3.8-27B-Uncensored\\models\\uncensored-12gb\\Qwen3.8-27B-Unleashed-UD-Q2_K_XL.gguf",
+      "baselineFitTarget": 512,
+      "forceFullGpu": true,
+      "supportsMtp": true
+    },
+    {
+      "id": "lowgpu-iq3",
+      "displayName": "OrcaRouter LowGPU IQ3XXXS",
+      "path": "C:\\AI\\Qwen3.8-27B-Uncensored\\models\\uncensored-12gb\\Qwen3.8-27B-LowGPU-uncensored-NoMTP-IQ3XXXS.gguf",
+      "baselineFitTarget": 512,
+      "forceFullGpu": true,
+      "supportsMtp": false
+    }
+  ],
+  "profiles": [
+    {
+      "id": "baseline",
+      "displayName": "Baseline Q8 KV",
+      "optimizedMemory": false,
+      "speculation": "none",
+      "requiresMtp": false
+    },
+    {
+      "id": "q4kv",
+      "displayName": "Q4 KV + smaller batches",
+      "optimizedMemory": true,
+      "speculation": "none",
+      "requiresMtp": false
+    },
+    {
+      "id": "q4kv-ngram",
+      "displayName": "Q4 KV + ngram-simple",
+      "optimizedMemory": true,
+      "speculation": "ngram-simple",
+      "requiresMtp": false
+    },
+    {
+      "id": "q4kv-mtp",
+      "displayName": "Q4 KV + MTP-2",
+      "optimizedMemory": true,
+      "speculation": "draft-mtp",
+      "requiresMtp": true
+    }
+  ]
+}

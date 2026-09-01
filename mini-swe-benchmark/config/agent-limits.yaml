@@ -1,0 +1,25 @@
+agent:
+  step_limit: 30
+  cost_limit: 0
+  wall_time_limit_seconds: 720
+  max_consecutive_format_errors: 5
+
+environment:
+  cwd: "/testbed"
+  executable: "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+  timeout: 120
+  pull_timeout: 900
+  container_timeout: "15m"
+  interpreter: ["bash", "-lc"]
+  run_args: ["--rm", "--network", "none"]
+  env:
+    PAGER: cat
+    MANPAGER: cat
+    LESS: -R
+    PIP_PROGRESS_BAR: "off"
+    TQDM_DISABLE: "1"
+  environment_class: docker
+
+model:
+  model_class: litellm_textbased
+  cost_tracking: ignore_errors

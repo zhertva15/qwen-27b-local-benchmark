@@ -1,0 +1,83 @@
+Return only the complete updated Python source with no Markdown fences or explanation. Preserve every line exactly except inside finalize_report: rename the local variable result to payload and update that method's return statement accordingly. Do not make any other edit.
+
+from dataclasses import dataclass
+from typing import Any
+
+
+DEFAULT_HEADERS = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+    "X-Client": "local-agent",
+    "X-Version": "3.8",
+}
+
+
+FIELD_MAP = {
+    "user_id": "userId",
+    "display_name": "displayName",
+    "created_at": "createdAt",
+    "updated_at": "updatedAt",
+    "is_active": "isActive",
+    "email_address": "emailAddress",
+    "phone_number": "phoneNumber",
+    "postal_code": "postalCode",
+    "country_code": "countryCode",
+    "account_type": "accountType",
+    "last_login": "lastLogin",
+    "login_count": "loginCount",
+    "failed_attempts": "failedAttempts",
+    "locked_until": "lockedUntil",
+    "preferred_locale": "preferredLocale",
+    "time_zone": "timeZone",
+}
+
+
+@dataclass(frozen=True)
+class ReportRow:
+    key: str
+    label: str
+    value: Any
+    visible: bool = True
+
+
+def normalize_key(value: str) -> str:
+    return value.strip().lower().replace(" ", "_").replace("-", "_")
+
+
+def public_key(value: str) -> str:
+    normalized = normalize_key(value)
+    return FIELD_MAP.get(normalized, normalized)
+
+
+def visible_rows(rows: list[ReportRow]) -> list[ReportRow]:
+    return [row for row in rows if row.visible]
+
+
+def serialize_row(row: ReportRow) -> dict[str, Any]:
+    return {
+        "key": public_key(row.key),
+        "label": row.label.strip(),
+        "value": row.value,
+    }
+
+
+def serialize_rows(rows: list[ReportRow]) -> list[dict[str, Any]]:
+    return [serialize_row(row) for row in visible_rows(rows)]
+
+
+def build_metadata(source: str, count: int) -> dict[str, Any]:
+    return {
+        "source": source,
+        "count": count,
+        "client": DEFAULT_HEADERS["X-Client"],
+        "version": DEFAULT_HEADERS["X-Version"],
+    }
+
+
+def finalize_report(rows: list[ReportRow], source: str) -> dict[str, Any]:
+    serialized = serialize_rows(rows)
+    result = {
+        "metadata": build_metadata(source, len(serialized)),
+        "rows": serialized,
+    }
+    return result

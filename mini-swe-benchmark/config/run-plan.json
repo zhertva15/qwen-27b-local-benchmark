@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "princeton-nlp/SWE-Bench_Verified",
+  "split": "test",
+  "agentConfig": "swebench_backticks.yaml",
+  "workers": 1,
+  "agentWallTimeSeconds": 720,
+  "evaluatorTimeoutSeconds": 180,
+  "suiteWallTimeSeconds": 21600,
+  "blocks": [
+    {"ordinal": 1, "model": "lowgpu-iq3xxxs", "seed": 101},
+    {"ordinal": 2, "model": "fp8-q4-k-m", "seed": 101},
+    {"ordinal": 3, "model": "direct-iq4-xs", "seed": 101},
+    {"ordinal": 4, "model": "direct-iq4-xs", "seed": 202},
+    {"ordinal": 5, "model": "fp8-q4-k-m", "seed": 202},
+    {"ordinal": 6, "model": "lowgpu-iq3xxxs", "seed": 202}
+  ]
+}
+

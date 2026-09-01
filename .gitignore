@@ -1,0 +1,18 @@
+# Large/runtime-only files
+*.gguf
+*.zip
+**/.venv/
+**/__pycache__/
+*.pyc
+
+# Local credentials and process state
+.env
+.env.*
+mini-swe-benchmark/state/active-server.json
+mini-swe-benchmark/state/benchmark-state.json
+mini-swe-benchmark/logs/server/
+
+# Temporary files
+*.tmp
+*.pid
+

@@ -1,0 +1,6 @@
+agent:
+  step_limit: 8
+  cost_limit: 0
+  wall_time_limit_seconds: 240
+  max_consecutive_format_errors: 3
+

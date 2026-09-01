@@ -1,0 +1,32 @@
+[
+  {
+    "model": "lowgpu-iq3xxxs",
+    "ok": true,
+    "loadSeconds": 38.579,
+    "vramUsedMiB": 10568,
+    "workingSetGiB": 8.77,
+    "offloadedLayers": "",
+    "finish": "stop",
+    "content": "```bash\necho READY\n```"
+  },
+  {
+    "model": "fp8-q4-k-m",
+    "ok": true,
+    "loadSeconds": 71.096,
+    "vramUsedMiB": 11122,
+    "workingSetGiB": 16.019,
+    "offloadedLayers": "",
+    "finish": "stop",
+    "content": "```mswea_bash_command\necho READY\n```"
+  },
+  {
+    "model": "direct-iq4-xs",
+    "ok": true,
+    "loadSeconds": 58.085,
+    "vramUsedMiB": 11234,
+    "workingSetGiB": 14.866,
+    "offloadedLayers": "",
+    "finish": "stop",
+    "content": "```mswea_bash_command\necho \"READY\"\n```"
+  }
+]

@@ -1,0 +1,17 @@
+model:
+  model_name: "openai/fp8-q4-k-m"
+  model_class: litellm_textbased
+  cost_tracking: ignore_errors
+  model_kwargs:
+    custom_llm_provider: openai
+    api_base: "http://127.0.0.1:8092/v1"
+    api_key: "local-swe-key"
+    allowed_openai_params: ["reasoning_effort"]
+    reasoning_effort: medium
+    temperature: 1.0
+    top_p: 0.95
+    max_tokens: 8192
+    timeout: 720
+    drop_params: false
+    extra_body:
+      top_k: 20

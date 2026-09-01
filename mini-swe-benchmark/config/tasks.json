@@ -1,0 +1,17 @@
+{
+  "dataset": "princeton-nlp/SWE-Bench_Verified",
+  "subset": "verified",
+  "split": "test",
+  "primary": [
+    "django__django-13195",
+    "django__django-15957",
+    "pytest-dev__pytest-10356",
+    "pytest-dev__pytest-5787"
+  ],
+  "fallbacks": {
+    "django": ["django__django-16263"],
+    "pytest-dev": ["pytest-dev__pytest-5840"]
+  },
+  "fixedOrder": true
+}
+

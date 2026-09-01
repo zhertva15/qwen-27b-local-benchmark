@@ -1,0 +1,43 @@
+{
+  "serverPath": "C:\\AI\\Qwen3.8-27B-Uncensored\\llama.cpp-b10734\\llama-server.exe",
+  "host": "127.0.0.1",
+  "port": 8092,
+  "apiKey": "local-swe-key",
+  "common": {
+    "contextSize": 32768,
+    "cacheTypeK": "q4_0",
+    "cacheTypeV": "q4_0",
+    "flashAttention": "on",
+    "batchSize": 2048,
+    "ubatchSize": 256,
+    "cacheReuse": 256,
+    "threads": 8,
+    "threadsBatch": 20,
+    "reasoningFormat": "deepseek",
+    "reasoningEffort": "medium"
+  },
+  "models": [
+    {
+      "id": "lowgpu-iq3xxxs",
+      "displayName": "OrcaRouter LowGPU IQ3XXXS",
+      "path": "C:\\AI\\Qwen3.8-27B-Uncensored\\models\\uncensored-12gb\\Qwen3.8-27B-LowGPU-uncensored-NoMTP-IQ3XXXS.gguf",
+      "fullGpu": true,
+      "mtp": false
+    },
+    {
+      "id": "fp8-q4-k-m",
+      "displayName": "FP8-derived Q4_K_M",
+      "path": "C:\\AI\\Qwen3.8-27B-Uncensored\\models\\Qwen3.8-27B-Uncensored-FP8.i1-Q4_K_M.gguf",
+      "fullGpu": false,
+      "mtp": true
+    },
+    {
+      "id": "direct-iq4-xs",
+      "displayName": "Direct OrcaRouter IQ4_XS",
+      "path": "C:\\AI\\Qwen3.8-27B-Uncensored\\models\\uncensored-12gb\\orcarouter_Qwen3.8-27B-Uncensored-IQ4_XS.gguf",
+      "fullGpu": false,
+      "mtp": true
+    }
+  ]
+}
+

@@ -1,0 +1,1 @@
+Return only compact Python code, with no Markdown fences, comments, or docstring. Implement merge_intervals(intervals: list[tuple[int, int]]) -> list[tuple[int, int]]. Normalize reversed endpoints, sort, merge overlapping or touching intervals, and do not mutate input. Then add exactly six one-line assert tests for: empty, reversed, touching, overlap, disjoint, single.
