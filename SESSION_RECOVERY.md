@@ -9,6 +9,7 @@
 - Название: `Установить и сравнить Qwen3.8-27B Q2 и Q4 на RTX 5070 12 ГБ`
 - Облачный снимок: <https://chatgpt.com/s/cx_6a97116566188191b0ff7bb2ae90edd8>
 - Приватный GitHub: <https://github.com/zhertva15/qwen-27b-local-benchmark>
+- Автономный Git-клон: `D:\Qwen_testr-backup\qwen-27b-local-benchmark\`
 - Сырой бэкап: `D:\Qwen_testr-backup\codex-session\01a05d27-c52f-7891-bb59-aac28d93f5fd\`
 - ZIP-копия сессии: `D:\Qwen_testr-backup\codex-session\01a05d27-c52f-7891-bb59-aac28d93f5fd.zip`
 - Проект и архив: `D:\Qwen_testr-backup\mini-swe-benchmark\` и

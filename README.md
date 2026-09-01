@@ -14,6 +14,7 @@
 ```text
 D:\Qwen_testr-backup\mini-swe-benchmark-full.zip
 D:\Qwen_testr-backup\mini-swe-benchmark\
+D:\Qwen_testr-backup\qwen-27b-local-benchmark\
 D:\Qwen_testr-backup\models\orcarouter_Qwen3.8-27B-Uncensored-IQ4_XS.gguf
 D:\Qwen_testr-backup\codex-session\01a05d27-c52f-7891-bb59-aac28d93f5fd\
 D:\Qwen_testr-backup\codex-session\01a05d27-c52f-7891-bb59-aac28d93f5fd.zip
@@ -23,6 +24,7 @@ D:\Qwen_testr-backup\codex-session\01a05d27-c52f-7891-bb59-aac28d93f5fd.zip
 
 - быстрый облачный снимок: <https://chatgpt.com/s/cx_6a97116566188191b0ff7bb2ae90edd8>;
 - сырой локальный бэкап на D: по пути выше;
+- автономный Git-клон всего проекта: `D:\Qwen_testr-backup\qwen-27b-local-benchmark\`;
 - безопасная карта продолжения: [SESSION_RECOVERY.md](SESSION_RECOVERY.md).
 
 Облачный снимок доступен любому, у кого есть ссылка. Сырой JSONL, SQLite-базы,
